@@ -1,0 +1,22 @@
+[2025-06-11T12:04:49.042+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-11T12:04:49.072+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework_taxi_pipeline.question_4_prepare_data manual__2025-06-11T12:01:19.497846+00:00 [queued]>
+[2025-06-11T12:04:49.083+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework_taxi_pipeline.question_4_prepare_data manual__2025-06-11T12:01:19.497846+00:00 [queued]>
+[2025-06-11T12:04:49.083+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-06-11T12:04:49.100+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): question_4_prepare_data> on 2025-06-11 12:01:19.497846+00:00
+[2025-06-11T12:04:49.119+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=649) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-11T12:04:49.121+0000] {standard_task_runner.py:72} INFO - Started process 658 to run task
+[2025-06-11T12:04:49.125+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'homework_taxi_pipeline', 'question_4_prepare_data', 'manual__2025-06-11T12:01:19.497846+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag_homework.py', '--cfg-path', '/tmp/tmpv5kx17vl']
+[2025-06-11T12:04:49.131+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask question_4_prepare_data
+[2025-06-11T12:04:49.196+0000] {task_command.py:467} INFO - Running <TaskInstance: homework_taxi_pipeline.question_4_prepare_data manual__2025-06-11T12:01:19.497846+00:00 [running]> on host e64a68750d42
+[2025-06-11T12:04:49.294+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='homework' AIRFLOW_CTX_DAG_ID='homework_taxi_pipeline' AIRFLOW_CTX_TASK_ID='question_4_prepare_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T12:01:19.497846+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T12:01:19.497846+00:00'
+[2025-06-11T12:04:49.295+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-06-11T12:04:49.310+0000] {logging_mixin.py:190} INFO - Question 4: Preparing data...
+[2025-06-11T12:04:53.631+0000] {logging_mixin.py:190} INFO - ✅ Question 4 Answer: 3,316,216 records after preparation
+[2025-06-11T12:04:56.465+0000] {python.py:240} INFO - Done. Returned value was: 3316216
+[2025-06-11T12:04:56.497+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-06-11T12:04:56.497+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=homework_taxi_pipeline, task_id=question_4_prepare_data, run_id=manual__2025-06-11T12:01:19.497846+00:00, execution_date=20250611T120119, start_date=20250611T120449, end_date=20250611T120456
+[2025-06-11T12:04:56.697+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-11T12:04:56.746+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-11T12:04:56.752+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
